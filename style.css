@@ -1,0 +1,33 @@
+html, body {
+    margin: 0; padding: 0; width: 100%; height: 100%;
+    background: #000; overflow: hidden;
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  #stage {
+    position: fixed; inset: 0; width: 100vw; height: 100vh;
+    overflow: hidden;
+    background: #000;
+  }
+  canvas#view {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    background: #000;
+  }
+  #hint {
+    position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
+    color: rgba(255,255,255,0.55); font-size: 13px; letter-spacing: 0.03em;
+    pointer-events: none; transition: opacity 0.6s ease; user-select: none;
+  }
+  #hint.hidden { opacity: 0; }
+  #fsBtn {
+    position: fixed; top: 14px; right: 14px; z-index: 5;
+    background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.75);
+    border: 1px solid rgba(255,255,255,0.2); border-radius: 6px;
+    padding: 6px 12px; font-size: 12px; cursor: pointer; letter-spacing: 0.02em;
+  }
+  #fsBtn:hover { background: rgba(255,255,255,0.16); }
+  #loading {
+    position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.6); font-size: 14px; letter-spacing: 0.05em; z-index: 10;
+  }
